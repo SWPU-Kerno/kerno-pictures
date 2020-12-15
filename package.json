@@ -1,0 +1,20 @@
+{
+  "name": "kerno-pictures",
+  "version": "1.0.0",
+  "description": "酷诺相册薄",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATQQ/kerno-pictures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATQQ/kerno-pictures/issues"
+  },
+  "homepage": "https://github.com/ATQQ/kerno-pictures#readme"
+}

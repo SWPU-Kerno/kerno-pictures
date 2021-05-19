@@ -1,9 +1,21 @@
 # kerno-pictures
 酷诺相册薄
+## 技术方案
+* [Web端](https://github.com/SWPU-Kerno/photo-album-web):Vue
+* [服务端](https://github.com/SWPU-Kerno/photo-album-server):Node.js+Express
+* 数据库:
+  * MySQL：存储应用数据
+  * Redis：状态维护
 
 ## [学习计划](./study/README.md)
 
-## 第一期需求
+
+## 需求
+<details>
+<summary>
+第一期需求
+</summary>
+
 粗略的描述
 ### 用户模块
 * 用户注册
@@ -30,6 +42,9 @@
   * 格式
   * 原名称
   * 链接
+
+</details>
+
 
 ### 数据库设计
 TODO：

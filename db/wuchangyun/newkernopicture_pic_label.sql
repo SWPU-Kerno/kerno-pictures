@@ -28,10 +28,8 @@ CREATE TABLE `pic_label` (
   `user_id` bigint NOT NULL,
   PRIMARY KEY (`pic_id`,`label_id`),
   KEY `label_id_idx` (`label_id`),
-  KEY `user_id_idx` (`user_id`),
   CONSTRAINT `label_id` FOREIGN KEY (`label_id`) REFERENCES `label` (`label_id`),
-  CONSTRAINT `pic_id` FOREIGN KEY (`pic_id`) REFERENCES `pictures_info` (`pic_id`),
-  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user_info` (`user_id`)
+  CONSTRAINT `pic_id` FOREIGN KEY (`pic_id`) REFERENCES `pictures_info` (`pic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-19 22:14:38
+-- Dump completed on 2021-05-19 23:25:40

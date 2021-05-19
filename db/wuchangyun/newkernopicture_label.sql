@@ -24,9 +24,12 @@ DROP TABLE IF EXISTS `label`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `label` (
   `label_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `label_name` varchar(20) NOT NULL,
   PRIMARY KEY (`label_id`),
-  UNIQUE KEY `label_id_UNIQUE` (`label_id`)
+  UNIQUE KEY `label_id_UNIQUE` (`label_id`),
+  KEY `user_id_idx` (`user_id`),
+  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user_info` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +39,7 @@ CREATE TABLE `label` (
 
 LOCK TABLES `label` WRITE;
 /*!40000 ALTER TABLE `label` DISABLE KEYS */;
-INSERT INTO `label` VALUES (1,'团队生活');
+INSERT INTO `label` VALUES (1,1,'团队生活');
 /*!40000 ALTER TABLE `label` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-19 22:14:38
+-- Dump completed on 2021-05-19 23:25:40

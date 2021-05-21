@@ -1,15 +1,16 @@
 # 数据库设计
 
 ## 用户表
-| 名      | 类型    | PK  | 注释     |
-| ------- | ------- | --- | -------- |
-| user_id | integer | 1   | 唯一标识 |
-| role    | tinyint |     | 权限     |
-| state   | tinyint |     | 状态     |
-| name    | varchar |     | 姓名     |
-| pwd     | varchar |     | 密码     |
-| sid     | varchar |     | 学号     |
-| grand   | varchar |     | 年级     |
+| 名      | 类型    | PK  | 注释                        |
+| ------- | ------- | --- | --------------------------- |
+| user_id | integer | 1   | 唯一标识                    |
+| role    | tinyint |     | 权限                        |
+| state   | tinyint |     | 状态                        |
+| name    | varchar |     | 姓名                        |
+| pwd     | varchar |     | 密码                        |
+| sid     | varchar |     | 学号                        |
+| grand   | varchar |     | 年级                        |
+| contact | varchar |     | 联系方式（QQ/wechat/phone） |
 
 ```ts
 enum USER_ROLE{
@@ -38,7 +39,8 @@ create table user
     name    varchar(256)      not null comment '姓名',
     pwd     varchar(256)      not null comment '密码',
     sid     varchar(256)      not null comment '学号',
-    grand   varchar(256)      not null comment '年级'
+    grand   varchar(256)      not null comment '年级',
+    contact varchar(256)      null comment '联系方式'
 );
 ```
 ## 图片表
